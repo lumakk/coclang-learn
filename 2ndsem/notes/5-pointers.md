@@ -1,5 +1,11 @@
 # Pointers
-Before learning pointers, we need to learn about memory addresses. 
+
+**Table of Contents:**
+- [1. Memory Address](#1-memory-address)
+- [2. Pointers](#2-pointers)
+    - [2.1 -  Dereferencing](#21----dereferencing)
+    - [2.2 - Double Pointers](#22---double-pointers)
+
 
 ## 1. Memory Address
 A **memory address** is the location of an object or variable within the **RAM**. You can print the memory address of a variable by using the `address of` operator or `&` like this: `&variable`, and a `%p` format specifier:
@@ -17,6 +23,8 @@ A **memory address** is the location of an object or variable within the **RAM**
 As seen above, variable `int myAge` has a value of 43 with a memory address of `0x1000`. A memory address is simply the location of a specific value or variable
 
 We can store the memory address of a variable using **pointers**
+
+---
 
 ## 2. Pointers
 A **pointer** is a type of variable that holds a memory address. 
@@ -55,8 +63,10 @@ See the following diagram for visualization:
 
 ![image](/2ndsem/notes/images/pointers.drawio.png)
 
-### 2.1 -  Dereferencing
 ---
+
+### 2.1 -  Dereferencing
+
 In order to access the content or value of a variable that a pointer points to, we do something called **dereferencing**
 ```c
     int myAge = 19;
