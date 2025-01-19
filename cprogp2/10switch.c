@@ -10,10 +10,23 @@ int main(){
     switch (grade)
     {
     case 'A':
-        /* code */
+        printf("perfect!\n");
+        break;
+    case 'B':
+        printf("You did good!\n");
+        break;
+    case 'C':
+        printf("You did okay!\n");
+        break;
+    case 'D':
+        printf("Atleast it's not an F!\n");
+        break;
+    case 'F':
+        printf("You failed!\n");
         break;
     
     default:
+        printf("Please input a valid grade");
         break;
     }
 
