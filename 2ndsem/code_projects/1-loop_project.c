@@ -2,23 +2,25 @@
 
 int main(){
 
-    int terms, sum;
-    int t1 = 0, t2 = 1;
+    int n;
+    int sum = 0;
 
-    printf("Input the number of terms: ");
-    scanf("%d", &terms);
-    
+    do{
+        printf("Enter a positive integer: ");
+        scanf("%d", &n);
+        printf("\n");
 
-    for(int i = 1; i <= terms; i++){
-        printf("%d, ", t1);
-        sum = t1 + t2;
-        t1 = t2;
-        t2 = sum;
+        if(n < 0 || n == '\0'){
+            printf("Number is not a positive integer, please try again!\n");
+        } else {
 
-    }
+            for(int i = 1; i <= n; ++i){
+                sum += i;
+            }
+        
+            printf("%d", sum);
+        }
 
-    
+    } while(n < 0 || n == '\0');
 
-
-    return 0;
 }
