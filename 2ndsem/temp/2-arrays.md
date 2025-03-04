@@ -26,7 +26,10 @@ In this case ``array[0]`` is used to access an element located in position 0 of 
     int arrays[] = {1, 2, 3, 4, 5};
 ```
 
-Therefore in order to access number 4, you need to set your index as 3: ``arrays[3]``
+Therefore in order to access number 4, you need to set your index as 3: ``arrays[3]`` in your `printf()` function for example:
+```c
+    printf("%d", array[3]);
+```
 
 #### <ins>Print Arrays using a loop</ins>
 
