@@ -37,23 +37,35 @@ The parts of a function are as follows:
 
 ### <ins>Arguments and Parameters</ins>
 
-**Parameters** act as variables inside the function, they allow data to be passed and accessed to and from the main function.
+**Parameters** act as variables inside the function, they store and receive data from other functions through `invoking`.
 
 ```c
-    void birthday(char name[], int age){}
-```
-In this example, `char name[]` and `int age` are the parameters.
+    void birthday(char name[], int age){  // PARAMETERS
 
-Once a function is called in a different function, the items inside tha parentheses are called **Arguments**
-```c
+    }
+
     int main(){
 
         birthday(name, age);
     }
 ```
-In this example, `name` and `age` are the arguments
+In the example above, `char name[]` and `int age` are the parameters.
 
-**How it looks:**
+Once a function is called or invoked, the items inside the parentheses are known as **Arguments**.
+The process of sending data to another function is called **passing**
+```c
+    void birthday_function(){
+
+    }
+
+    int main(){
+
+        birthday(name, age); // FUNCTION CALL
+    }
+```
+In the example above, `name` and `age` are the arguments.
+
+**Example code:**
 ```c
     void birthday(char name[], int age){
         printf("\nHappy birthday dear %s!", name);
@@ -64,16 +76,17 @@ In this example, `name` and `age` are the arguments
         char name[] = "Mac";
         int age = 19;
 
-        birthday(name, age);
+        birthday(name, age); 
     }
+
     // PRINTS: Happy birthday dear Mac!
     // You are 19 years old!
 ```
 A step by step process would be as follows:
 1. Run `int main`
 2. call `birthday` function with arguments `name` and `age`
-3. Run `birthday` function with parameters `char name[]` and `int age`
-4. Access variables `char name[]` and `int age` from `main` function
+3. pass data from variables `char name[]` and `int age` into the `birthday` function
+4. Store data in parameters `char name[]` and `int age`
 5. Run code inside the `birthday` function
 
 > Note: When working with multiple paramaters, the function call must have the same number of arguments as there are parameters, and the arguments must be passed in the same order
@@ -92,3 +105,21 @@ A step by step process would be as follows:
     // PRINTS: Happy birthday dear Mac!
     // You are 19 years old!
 ```
+
+**Parameters** doesn't need to have the same name as **arguments** 
+
+```c
+    int calculate_sum(int a, int b){
+        return a + b;
+    }
+
+    int main(){
+        int num1 = 10;
+        int num2 = 20;
+
+        int sum = calculate_sum(num1, num2);
+
+        printf("The sum of %d and %d is %d.\n", num1, num2, sum);
+    }
+```
+As seen above the data from `int num1` and `int num2 `is passed into the `calculate_sum` function and stored in parameters `int a` and `int b`
