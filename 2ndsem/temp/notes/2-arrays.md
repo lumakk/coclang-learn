@@ -88,4 +88,4 @@ The expression can then be declared as an **integer** so that it can be used any
 This means we no longer need to update the size of the array in the `for loop` and it will automatically calculate the length of an array even if we add or remove elements in the array.
 
 #### <ins>How to store user input into an array</ins>
-In order to input an array
+In order to input an array you'
