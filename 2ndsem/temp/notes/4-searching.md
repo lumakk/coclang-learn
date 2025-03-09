@@ -54,3 +54,25 @@ The `for loop` will act as the pointer while the `if statement` with the conditi
 If `arr[i] == target` is `true` it will return the value of the element that is being pointed at via `return i`. If not, the pointer will `increment` by one via `i++`, it will keep doing this as long as `i` is less than the `size of the array`
 
 If the `for loop` completes without finding/returning an element, it will `return -1`, meaning target is not found
+
+**In the `main` function:**
+```c
+    int main(){
+        int array[] = {4, 2, 7, 1, 9, 3};
+        int size = sizeof(my_list) / sizeof(my_list[0]);
+        int target = 7;
+        int result = linear_search(array, size, target);
+
+        if (result != -1) {
+            printf("Element found at index %d\n", result);
+        } else {
+            printf("Element not found in the list\n");
+        }
+    }
+```
+
+We store the result of the `linear_search` function in a variable named `result`. We then create an `if else` statement in order to determine whether the result is the element that we are looking for.
+
+If `result` is `not equal to -1`, the element has been **found**, else the element doesn't exist/is **not found** in the array
+
+### <ins>Binary Search</ins>
