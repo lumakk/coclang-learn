@@ -76,3 +76,47 @@ We store the result of the `linear_search` function in a variable named `result`
 If `result` is `not equal to -1`, the element has been **found**, else the element doesn't exist/is **not found** in the array
 
 ### <ins>Binary Search</ins>
+also known as **binary chop** is a searching algorithm for **sorted arrays** where the array is divided into two halves everytime the middle element is not equal to the element we are looking for.
+
+If linear search is looking at each page in a book to find a word, binary search is skipping to the middle and sifting either left or right to find it
+
+![image](/2ndsem/temp/notes/images/binary_search.gif)
+
+The **Best Case Scenario** for the algorithm is if the middle element is the element to be searched
+
+The **Worst Case Scenario** for the algorithm is if either the first or last element is the element to be searched
+
+#### Pros and Cons of the Binary Search:
+**✅ Pros:**
+  - It performs **great** for **large array sizes**
+  - It is generally faster than linear search
+  
+**❌Cons:**
+  - It only works on **sorted arrays**
+  - You need to first create a sorting algorithm in order to use binary search
+  
+#### Basic Algorithm:
+The basic structure of a binary search is as follows:
+```c
+    int binary_search(int arr[], int size, int target){
+        int left = 0;
+        int right = size - 1;
+
+        while(left <= right){
+            int middle = left + (right - left) / 2;
+
+            if (arr[middle] == target) {
+                return middle;
+            }
+
+            if (arr[middle] < target){
+                left = middle + 1;
+            }
+
+            else {
+                right = middle - 1;
+            }
+        }
+        return -1;
+    }
+```

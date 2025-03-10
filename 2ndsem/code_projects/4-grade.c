@@ -1,10 +1,8 @@
 #include <stdio.h>
 
-int linearSearch(int array[], int value, int target){
-
-    for (int i = 0; i < value; i++)
-    {
-        if(array[i] == target){
+int linear_search(int arr[], int size, int target){
+    for(int i = 0; i < size; i++){
+        if(arr[i] == target){
             return i;
         }
     }
@@ -12,33 +10,30 @@ int linearSearch(int array[], int value, int target){
 }
 
 int main(){
-    int value;
-    int target;
+    int target, size;
 
-    printf("Input the size of the array: ");
-    scanf("%d", &value);
-    int array[value];
-
-    for (int i = 0; i < value; i++) {
-        printf("\nInput element %d: ", i);
+    printf("Input the size of your array: ");
+    scanf("%d", &size);
+    int array[size];
+    
+    for(int i = 0; i < size; i++){
+        printf("\nInput Element %d: ", i);
         scanf("%d", &array[i]);
     }
 
-    for (int i = 0; i < value; i++){
-        printf("Element %d: %d\n", i, array[i]);
+    for(int i = 0; i < size; i++){
+        printf("\nElement %d is: %d", i + 1, array[i]);
     }
 
-    printf("Please input a number to search: ");
+    printf("\nFind an element: ");
     scanf("%d", &target);
 
-    int result = linearSearch(array, value, target);
+    int result = linear_search(array, size, target);
 
-    if (result != -1) {
-        printf("Number %d found in position: %d", target, result);
+    if(result != -1){
+        printf("Element found at index: %d\n", result);
     } else {
-        printf("Number not found");
+        printf("Element is not found!");
     }
-    
 
-    
 }
