@@ -2,7 +2,8 @@
 
 ### <ins>For loops</ins>
 repeats a section of code a **limited** amount of times
-<br> **Code**: 
+
+**Code**: 
 ```c
     for(count; condition; increment){
         
@@ -24,7 +25,8 @@ Step-by-step:
 
 ### <ins>While loops</ins>
 repeats a section of code an **unlimited** amount of times if the condition is true
-<br> **Code**: 
+
+**Code**: 
 ```c
     while(condition){
         code
