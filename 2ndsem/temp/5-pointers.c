@@ -1,20 +1,23 @@
 #include <stdio.h>
 
-int swap(int *num1, int *num2){
-    int temp = *num1;
-    *num1 = *num2;
-    *num2 = temp;
-}
-
 int main(){
-    int num1 = 1, num2 = 5;
 
-    printf("Before swapping: num1 = %d, num2 = %d\n", num1, num2);
+    int myNumber = 7;
+    int *pMyNum = &myNumber;
+    int deref = *pMyNum;
 
-    swap(&num1, &num2);
+    // INPUT A NUMBER
+    // printf("Input a number: ");
+    // scanf("%d", &myNumber);
 
-    printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+    // PRINT NUMBER
+    printf("\nMemory address of number is %d", myNumber);
 
+    // PRINT MEMORY ADDRESS
+    printf("\nMemory address of number is %p", pMyNum);
+
+    // PRINT DEREFERENCE
+    printf("\nDereference number: %d", deref);
 
 
 }

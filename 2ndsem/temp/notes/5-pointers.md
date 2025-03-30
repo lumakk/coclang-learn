@@ -77,4 +77,9 @@ See the following diagram for visualization:
 > - When used in declaration `(int *ptr)`, you are initializing a **pointer variable**
 > - When not used in declaration it is **dereferencing**
 
-test
+You can also store dereferenced values as an integer as seen below:
+```c
+    int myNumber = 7;
+    int *ptr = &myNumber;
+    int deref = *ptr; // DEREFERENCE
+```
