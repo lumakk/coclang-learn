@@ -14,7 +14,7 @@ int ackermann(int m, int n)
  
 int main(){
     int A;
-    A = ackermann(1, 2);
+    A = ackermann(3, 9);
     printf("%d", A);
     return 0;
 }
